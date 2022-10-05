@@ -1,0 +1,13 @@
+#book-ticket{
+    background: rgb(255 255 255);
+    width: 70%;
+    margin: auto;
+    height: 40%;
+    position: fixed;
+    top: 30%;
+    left: 15%;
+}
+input[type="text"]{
+    visibility: 0;
+    width: 0;
+}

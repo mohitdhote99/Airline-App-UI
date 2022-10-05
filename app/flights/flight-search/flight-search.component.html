@@ -1,0 +1,54 @@
+<section id="flight-search-nav" style="margin-top:20px;">
+  <form [formGroup]="searchbysource" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="col"> 
+        <input type="text" class="form-control" placeholder="source" id="source"  name="title"  formControlName="source" >            
+      </div>
+      <div class="col">
+        <input  type="text" class="form-control" placeholder="destination" id="destination"  name="title"  formControlName="destination" >
+      </div>
+      <div class="col">
+        <button class="btn btn-success">search</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-success" [routerLink]="['/list-all-flight']">All-flights</button>
+      </div>
+    </div>
+  </form>
+</section>
+<!--
+
+<table class="table flightResults" >
+    <thead>
+      <tr>
+        <th scope="col">flight id</th>
+        <th scope="col">flignt name</th>
+        <th scope="col">arrival</th>
+        <th scope="col">departure</th>
+        <th scope="col">source</th>
+        <th scope="col">destination</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fli of searchflights">
+            <td>{{fli.flightId}}</td>
+            <td>{{fli.flightName}}</td>
+            <td>{{fli.flightArrival}}</td>
+            <td>{{fli.flightDeparture}}</td>
+            <td>{{fli.flightSour}}</td>
+            <td>{{fli.flightDest}}</td>
+            <td data-toggle="modal" data-target=".bd-example-modal-lg">
+              <i class="bi bi-check2-square"></i></td>
+        </tr>
+    </tbody>
+  </table>
+-->
+<!-- Large modal -->
+<!--<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <app-book-ticket></app-book-ticket>
+    </div>
+  </div>
+</div> -->

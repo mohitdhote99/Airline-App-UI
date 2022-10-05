@@ -1,0 +1,35 @@
+#flight-search-nav{
+    width:80%;
+    margin:auto;
+}
+
+table{
+    width:90%;
+    margin:30px  auto;
+    border: 1px solid darkgrey;
+    text-align: center;
+}
+table tbody{
+    color: grey;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+table thead{
+    background: repeating-linear-gradient(168deg, #dc3545, #0082c1 100px);
+    color: white;
+}
+table tbody td i{
+    font-size: 20px;
+    font-weight: 900;
+    transition: 0.5s all ease-in-out;
+    cursor: pointer;
+    border-left:5px solid transparent;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+table tbody td i:hover{
+    color: #af0de0;
+    border-left:5px solid #af0de0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}

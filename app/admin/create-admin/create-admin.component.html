@@ -1,0 +1,37 @@
+<section id="RegHome" class="clr">
+    <div>
+        <div class="reg-form">
+            <div id="signup-indicator" class="clr" style="margin-top:15px;">
+                <div style="width:100%;">
+                    <div class="textAl-c fl" style="width:50%;">
+                        <button style="width:100%;" [routerLink]="['/signup-user']">User signup</button>
+                    </div>
+                    <div class="textAl-c fl" style="width:50%;">
+                        <button style="width:100%;" [routerLink]="['/signup-admin']">Admin signup</button>
+                    </div>
+                </div>
+            </div>
+            <form [formGroup]="AdminSignUp"(ngSubmit)="onSubmit()">
+                <div>
+                    <div class="form-row form-group">
+                        <div class="col">
+                          <input type="email" class="form-control" formControlName="admUsername" name="admUsername" placeholder="Admin Username" required>
+                          <div *ngIf="submitted && AdminSignUp.controls['admUsername'].errors" class="error"> 
+                            <div class="text-danger" *ngIf="AdminSignUp.controls['admUsername'].errors['required']">username is required</div> 
+                          </div> 
+                        </div>
+                      </div>
+                      <div class="form-row form-group">
+                        <div class="col">
+                          <input type="password" class="form-control" formControlName="admPassword" name="admPassword" placeholder="Admin Password" required>
+                          <div *ngIf="submitted && AdminSignUp.controls['admPassword'].errors" class="error"> 
+                            <div class="text-danger" *ngIf="AdminSignUp.controls['admPassword'].errors['required']">password is required</div> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tc"><button class="button" id="submit">Sign up</button> </div>
+                </div>
+        </form>
+    </div>
+    </div>
+</section>

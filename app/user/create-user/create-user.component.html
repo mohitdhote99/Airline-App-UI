@@ -1,0 +1,95 @@
+<section id="RegHome" class="clr">
+  <div>
+    <div class="reg-form">
+      <div id="signup-indicator" class="clr" style="margin-top:15px;">
+        <div style="width:100%;">
+          <div class="textAl-c fl" style="width:50%;">
+            <button style="width:100%;" [routerLink]="['/signup-user']">User signup</button>
+          </div>
+          <div class="textAl-c fl" style="width:50%;">
+            <button style="width:100%;" [routerLink]="['/signup-admin']">Admin signup</button>
+          </div>
+        </div>
+      </div>
+      <form [formGroup]="registerUser" (ngSubmit)="onSubmit()">
+        <div>
+          <div class="form-row form-group">
+            <div class="col">
+              <input type="text" formControlName="userName" name="userName" class="form-control"
+                placeholder="Full name">
+              <div *ngIf="submitted && registerUser.controls['userName'].errors" class="error">
+                <div class="text-danger" *ngIf="registerUser.controls['userName'].errors['required']">name is
+                  required</div>
+              </div>
+            </div>
+            <div class="col">
+              <!-- <span><i class="bi bi-person-fill"></i></span> -->
+              <input type="number" class="form-control" formControlName="userContact" name="userContact"
+                placeholder="phone number">
+              <div *ngIf="submitted && registerUser.controls['userContact'].errors" class="error">
+                <div class="text-danger" *ngIf="registerUser.controls['userContact'].errors['required']">contact is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row form-group">
+            <div class="col">
+              <!-- <span><i class="bi bi-person-fill"></i></span> -->
+              <input type="email" class="form-control" formControlName="userEmail" name="userEmail" placeholder="email">
+              <div *ngIf="submitted && registerUser.controls['userEmail'].errors" class="error"> 
+                <div class="text-danger" *ngIf="registerUser.controls['userEmail'].errors['required']">Email is required</div> 
+              </div>
+            </div>
+            <div class="col">
+              <!-- <span><i class="bi bi-person-fill"></i></span> -->
+              <input type="password" class="form-control" formControlName="userPassword" name="userPassword"
+                placeholder="password">
+                <div *ngIf="submitted && registerUser.controls['userPassword'].errors" class="error"> 
+                  <div class="text-danger" *ngIf="registerUser.controls['userPassword'].errors['required']">password is required</div> 
+                </div>
+            </div>
+          </div>
+          <div class="form-row form-group">
+            <div class="col">
+              <select name="userGender" formControlName="userGender" class="custom-select">
+                <option selected>Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <div *ngIf="submitted && registerUser.controls['userGender'].errors" class="error"> 
+                <div class="text-danger" *ngIf="registerUser.controls['userGender'].errors['required']">gender is required</div> 
+              </div>
+            </div>
+            <div class="col form-group">
+              <!-- <span><i class="bi bi-person-fill"></i></span> -->
+              <input type="text" class="form-control" formControlName="userCity" name="userCity" placeholder="city">
+              <div *ngIf="submitted && registerUser.controls['userCity'].errors" class="error"> 
+                <div class="text-danger" *ngIf="registerUser.controls['userCity'].errors['required']">city is required</div> 
+              </div>
+            </div>
+          </div>
+          <div class="form-row form-group">
+            <div class="col">
+              <!-- <span><i class="bi bi-person-fill"></i></span> -->
+              <input type="text" class="form-control" formControlName="userCountry" name="userCountry"
+                placeholder="country">
+                <div *ngIf="submitted && registerUser.controls['userCountry'].errors" class="error"> 
+                  <div class="text-danger" *ngIf="registerUser.controls['userCountry'].errors['required']">country is required</div> 
+                </div>
+            </div>
+          </div>
+
+          <!-- <div class="form-row">
+                        <select class="custom-select" id="inlineFormCustomSelect">
+                          <option selected>Select gender</option>
+                          <option value="M">Male</option>
+                          <option value="F">Female</option>
+                        </select>
+                      </div> -->
+
+          <div class="tc"><button class="button" id="submit">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

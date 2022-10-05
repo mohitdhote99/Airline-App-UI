@@ -1,0 +1,197 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --airline-theme: linear-gradient(215deg, #d278ff, #0c8aa7);
+    --airline-theme-hover: linear-gradient(182deg, #0c8aa7,#d278ff);
+    --theme-all:#a31bff;
+    --theme-all-hover:#c23ef7;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+.clr:after{
+    clear:both;
+    content: '';
+    display: block;
+}
+.fl{float: left;}
+.fr{float: right;}
+.tc{text-align: center;}
+a,input,button{outline: none;text-decoration: none;}
+input:focus{
+    border-color:#0c8aa7!important;
+}
+
+.FL{
+    float:left;
+}
+.logodiv{
+    width: 100px;
+}
+.wdthfit{
+	width: fit-content;
+}
+.textAl-c{
+    text-align: center !important;
+}
+.wdt100{
+    width: 100%;
+}
+.wdth_auto{
+        width: fit-content;
+        margin: auto;
+}
+/* login and signup */
+
+#RegHome{
+    background:var(--airline-theme);
+    height: 600px;
+}
+
+.reg-form{
+    margin:50px auto;
+    width: 100%;
+    display: inline-block;
+}
+.reg-form form{
+    width: 60%;
+    background-color: white;
+    /* border-radius: 8px; */
+    margin: auto;
+}
+.form-row{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.reg-form form >div:first-child{
+    padding:50px;
+}
+
+.button{
+    padding: 8px 30px;
+    transition: 0.5s all linear;
+    border: 1px solid transparent;
+    background: var(--airline-theme);
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 40%;
+    border-radius:5px;
+}
+
+.button:hover{
+    box-shadow: 0px 0px 4px #4a4a4a;
+    background-color: var(--airline-theme-hover);
+    color: white;
+    box-shadow: 0px 0px 2px 0px #b1b1b1;
+}
+
+
+#signup-indicator{
+    width: 60%;
+    margin:auto;
+}
+
+#signup-indicator >div:first-child{
+    width: 50%;
+    text-align: center;
+    color: teal;
+}
+
+#signup-indicator >div:first-child button{
+    border: none;
+    padding: 15px;
+}
+
+#signup-indicator >div:first-child button:focus{
+    background:var(--airline-theme-hover);
+}
+
+
+
+
+
+
+
+
+/* slider */
+.slider_offers>.clr:first-child{
+
+    background-color: #ffffffc9;
+    padding: 10px 0px;
+}
+
+.slider_offers>.clr:first-child>div.fl{
+	width: 30%;
+}
+
+.slider_offers>.clr:first-child>div.fl span{
+    display: block;
+}
+
+.slider_offers>.clr:first-child>div.fl>.clr .fl>span:first-child{
+    font-size: 12px;
+    font-weight: bolder;
+    margin-bottom: 4px;
+}
+
+.slider_offers>.clr:first-child>div.fl>.clr .fl>span:last-child{
+	font-size: 12px;
+}
+
+.slider_offers>.clr>.fl:nth-child(2){
+    border-right: 1px solid darkgrey;
+    border-left: 1px solid darkgrey;
+    margin: 0px 3%;
+    padding-top: 0 2%
+}
+
+.slider_offers>.clr:first-child>div.fl>.clr .fl:first-child {
+    padding: 3px 10px;
+    color: var(--ht-btncol--);
+    font-size: 24px;
+    margin-right: 5%;
+    width: 15%;
+}
+
+.slider_offers>.clr:first-child>div.fl>.clr .fl:last-child{width:80%}
+/*slider css*/
+.ht_slider_slides_parent{
+    z-index: 1;
+    overflow: hidden;
+    height: 350px;
+}
+
+.ht_slider_wraper{ position: relative; }
+
+.ht_slider_slides_wraper{
+    height: 610px;
+    display: flex;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5{
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s all ease;
+}
+
+.slide1{ background-image: url('/assets/images/plane3.jpeg');}
+
+.slide2{background-image: url('/assets/images/plane2.jpeg');}
+
+.slide3{background-image: url('/assets/images/plane4.jpeg');}
+
+.slide4{background-image: url('/assets/images/plane5.jpeg');}
+
+/*trigers button next pervious*/
+.prevbut{ left: 2%; }
+
+.nextbut{ right: 2%; }
+
+.prevbut,.nextbut{top:50%; position: absolute;font-size: 35px; color: #83838340;}
+
+
+
+

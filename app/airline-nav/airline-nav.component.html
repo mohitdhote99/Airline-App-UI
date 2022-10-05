@@ -1,0 +1,32 @@
+
+	<header class="header_des">
+		<div>
+		<div class="clr">
+		<div class="tc_left FL"></div>
+		<div class="tc_right FL"></div>
+		</div>
+		</div>
+		<div class="navsection nav_bf_des">
+			<nav class="nav_width_bf">
+			<div class="clr">
+				<div class="FL">
+				<div>
+					<img src="assets/images/logomain.jpg">
+				</div>
+				 </div>
+				<div class="FL">
+				<ul>
+				<li id="demo_test"></li>
+				<li><a [routerLink]="['']">home</a></li>
+				<li><a id="test_color" [routerLink]="['/flight']">flight</a></li>
+				<li><a id="test_color" [routerLink]="['/signup-user']">signup</a></li>
+				<li><a id="test_color" [routerLink]="['/login-user']">login</a></li>
+				<li *ngIf="user"><a id="test_color" (click)="logout()">logout</a></li>
+				</ul>
+				</div>
+			</div>
+			</nav>
+		</div>
+	</header>
+	<div class="clear_nav"></div>
+	
